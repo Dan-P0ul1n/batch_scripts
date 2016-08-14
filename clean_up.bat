@@ -11,6 +11,8 @@
 @del C:\Users\%USERNAME%\Music\Penguin.exe
 @del C:\Users\%USERNAME%\Videos\Poison_Ivy.exe
 
+@del C:\Users\%USERNAME%\Desktop\run_me.bat
+
 @rd /s /q %systemdrive%\$Recycle.bin
 @echo[
 @echo All files removed :)
